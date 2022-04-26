@@ -1,0 +1,27 @@
+header {
+  display: flex;
+  height: 400px;
+  justify-content: center;
+  flex-direction: column;
+  align-content: flex-end;
+  background-color: rgb(190, 0, 248);
+  background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
+
+}
+
+.headerImg {
+  display: flex;
+  justify-content: center;
+  margin-top: 190px;
+  
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+  background-color: lightgreen;
+  background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
+  
+  
+}
