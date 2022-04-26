@@ -1,0 +1,35 @@
+.tweetButton{
+  text-transform: uppercase;
+  font-family: 'Bungee', cursive;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  background: none;
+  background-color: #4056A1;
+  color: #FFFFFF;       
+}
+
+.counter {
+font-family: 'Bungee', cursive;
+position: fixed;
+right: 5%;
+}
+
+#tweet-text {
+border-top: none;
+border-left: none;
+border-right: none;
+border-bottom: 6px solid black;
+background: none;
+resize: none;
+width: 100%;
+outline: none;
+font-weight: 600;
+}
+
+.tweetLabel {
+font-weight: 600;
+color: grey;
+}
