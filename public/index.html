@@ -18,8 +18,8 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -45,19 +45,24 @@
       </div>
       <br>
       <div class="headerName">
-        <h2>Jason Ram</h2>
+        <h2 class="userName">Jason Ram</h2>
       </div>
     </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <h1>Lorem ipsum dolor sit amet</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Turpis egestas sed tempus urna et pharetra pharetra massa. Rhoncus mattis rhoncus urna neque viverra. Duis at tellus at urna condimentum mattis pellentesque. Sed augue lacus viverra vitae congue eu consequat ac felis. Felis eget velit aliquet sagittis id consectetur purus. Orci sagittis eu volutpat odio facilisis. Quis varius quam quisque id diam vel quam.
-      </p>
-      <p>
-        Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dui accumsan sit amet nulla facilisi morbi. Sed nisi lacus sed viverra. Ut tellus elementum sagittis vitae et leo duis. Malesuada pellentesque elit eget gravida cum. Auctor urna nunc id cursus. Adipiscing at in tellus integer feugiat scelerisque varius morbi. Viverra mauris in aliquam sem. Id diam vel quam elementum. Mi eget mauris pharetra et. Morbi quis commodo odio aenean. Sagittis vitae et leo duis ut diam. Commodo ullamcorper a lacus vestibulum. Egestas pretium aenean pharetra magna. Diam maecenas ultricies mi eget mauris pharetra. Sed risus ultricies tristique nulla aliquet enim. Amet massa vitae tortor condimentum lacinia quis vel eros.
-      </p>
+      <section class="new-tweet">
+        
+        <form action="/tweets/" method="POST">
+          <label class="tweetLabel" for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div>
+            <button class="tweetButton" type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+      
     </main>
   </body>
 </html>
