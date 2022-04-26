@@ -5,9 +5,8 @@ header {
   justify-content: center;
   flex-direction: column;
   align-content: flex-end;
-  background-color: rgb(190, 0, 248);
-  background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
-
+  background-color: orange;
+  background-image: url("https://www.transparenttextures.com/patterns/cream-pixels.png");
 }
 
 .headerImg {
@@ -17,12 +16,11 @@ header {
   
 }
 
-h2 {
+.userName {
   display: flex;
+  color: #FFFFFF;
   justify-content: center;
   margin-top: -20px;
-  background-color: lightgreen;
-  background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
-  
-  
+  background-color: orange;
+  background-image: url("https://www.transparenttextures.com/patterns/cream-pixels.png");
 }

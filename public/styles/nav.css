@@ -9,22 +9,19 @@ nav {
   padding-left: 1.5em;
   padding-right: 1.5em;
 
-  
-  
 }
 
 span {
   font-family: 'Bungee', cursive;
   display: flex;
   align-items: center;
-  font-size: larger;
+  font-size: 38px;
 }
 
 
 .navDetails {
   display: flex;
   align-items: center;
-  
   flex-direction: column;
 }
 
