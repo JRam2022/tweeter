@@ -9,6 +9,8 @@ $(document).ready(function(){
     //colors text red if no characters remain
     if (textLeft < 0) {
       $(".counter").css("color", "red")
+    } else {
+      $(".counter").css("color", "black")
     }
     //updates counter
     const textRemaining = $(".counter").text(textLeft)
