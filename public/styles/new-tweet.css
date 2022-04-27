@@ -4,17 +4,21 @@
   text-align: center;
   position: relative;
   text-decoration: none;
-  display: inline-block;
+  display: flex;
   border: none;
   background: none;
   background-color: #4056A1;
-  color: #FFFFFF;       
+  color: #FFFFFF;  
+  margin-top: 5px;
+
 }
 
 .counter {
 font-family: 'Bungee', cursive;
-position: fixed;
-right: 5%;
+display: flex;
+justify-content: end;
+margin-top: -33px;
+
 }
 
 #tweet-text {
