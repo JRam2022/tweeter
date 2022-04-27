@@ -10,6 +10,7 @@ article:hover {
   outline: none;
   font-weight: 600;
   margin-top: 50px;
+  margin-bottom: 100px;
   
 }
 
@@ -65,8 +66,9 @@ article:hover {
 }
 
 .footer-icon {
-  position: sticky;
-  left: 88%;
+  position:sticky;
+  left:88%;
+  padding-right: 5%;
 }
 
 .fa-solid:hover {
