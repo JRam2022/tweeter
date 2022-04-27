@@ -1,0 +1,27 @@
+article {
+  border: 6px solid black;
+  background: none;
+  resize: none;
+  width: 100%;
+  outline: none;
+  font-weight: 600;
+  margin-top: 200px;
+}
+
+.user-tweet {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 6px solid black;
+  background: none;
+  resize: none;
+  width: 100%;
+  outline: none;
+  font-weight: 600;
+}
+
+.user-img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 50%;
+}
