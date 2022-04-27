@@ -5,15 +5,15 @@
   width: 100%;
   outline: none;
   font-weight: 600;
-  margin-top: 200px;
+  margin-top: 50px;
   
 }
 
 .user-tweet {
   margin: auto;
-  border-top: 6px solid red;
-  border-left: 6px solid red;
-  border-right: 6px solid red;
+  border-top: 1px solid red;
+  border-left: 1px solid red;
+  border-right: 1px solid red;
   border-bottom: 6px solid black;
   background: none;
   width: 97%;
@@ -24,11 +24,12 @@
 .tweet-header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
+  margin: auto;
 }
 
 .user-img {
-  max-width: 100px;
+  max-width: 50px;
   height: auto;
   border-radius: 50%;
 }
@@ -36,6 +37,20 @@
 .tweet-footer{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  align-items:center;
+  font-size: 75%;
+  margin-top: -12px;
 }
 
+.tweet-date {
+  position: relative;
+  left: 30px;
+  
+  
+}
+
+.footer-icon {
+  position: sticky;
+  left: 88%;
+  
+}
