@@ -1,3 +1,7 @@
+article:hover {
+  box-shadow: 15px 10px lightskyblue;
+}
+
 .tweet-card {
   border: 6px solid black;
   background: none;
@@ -15,6 +19,7 @@
   background: none;
   width: 97%;
   padding-bottom: 3%;
+  padding-left: 2%;
   margin-top: 3%;
   font-weight: 600;
 }
@@ -62,4 +67,8 @@
 .footer-icon {
   position: sticky;
   left: 88%;
+}
+
+.fa-solid:hover {
+  color: gold;
 }
