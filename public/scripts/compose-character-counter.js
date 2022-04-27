@@ -1,7 +1,5 @@
 
 $(document).ready(function(){
-  //const counter = document.querySelector(".counter")
-
   $("#tweet-text").on('input', function(){
     const textCount = $(this).val();
     //calculates characters remaining
@@ -15,14 +13,4 @@ $(document).ready(function(){
     //updates counter
     const textRemaining = $(".counter").text(textLeft)
   });
-
-
-
-
-
-
-
-
-
-
 });
