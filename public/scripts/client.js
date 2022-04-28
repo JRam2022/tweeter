@@ -5,6 +5,12 @@
  */
 
 $(document).ready(function() {
+  //stops xss attack D:
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
   
   const createTweetElement = function(tweet) {
 
@@ -12,16 +18,16 @@ $(document).ready(function() {
       <article class="tweet-card">
           <div class="tweet-header">
             <div class ="user-info">
-              <img class="user-img" src=${tweet.user.avatars}> 
-              <p class="user-name">${tweet.user.name}</p>
+              <img class="user-img" src=${escape(tweet.user.avatars)}> 
+              <p class="user-name">${escape(tweet.user.name)}</p>
             </div>
-            <p class="user-handle">${tweet.user.handle}e</p>
+            <p class="user-handle">${escape(tweet.user.handle)}e</p>
           </div>
             <p class="user-tweet">
-              ${tweet.content.text}
+              ${escape(tweet.content.text)}
             </p>
           <div class="tweet-footer">
-            <p class="tweet-date">${timeago.format(tweet.created_at)}</p>
+            <p class="tweet-date">${escape(timeago.format(tweet.created_at))}</p>
             <div class="footer-icon">
               <i class="fa-solid fa-flag"></i>
               <i class="fa-solid fa-retweet"></i>
@@ -53,17 +59,34 @@ $(document).ready(function() {
       $('#tweets-container').append(renderTweet);
     })
   }
+  const ErrTooMany = $(".error-too-many")
+  const ErrNoContent = $(".error-no-content")
   
-  
+  $(ErrNoContent).hide()
+  $(ErrTooMany).hide()
 
   $('.tweet-form').submit(function (event){
     event.preventDefault();
+    //.error-too-many
+    //.error-no-content
     
     const textCount = $(".counter").text()
-    if (textCount >= 140 || textCount < 0) {
-      alert('ERROR')
+
+    if (textCount >= 140) {
+      //show 
+      $(ErrNoContent).slideDown()
       return;
+    } else if (textCount < 0){
+      $(ErrTooMany).slideDown()
+      //show
+      return
+    } else {
+      //hide
+      $(ErrNoContent).hide()
+      $(ErrTooMany).hide()
     }
+
+
     const serialized = $(this).serialize()
     $.ajax({
       url: '/tweets',
@@ -76,7 +99,8 @@ $(document).ready(function() {
     });
     
   })
+
   loadTweets()
-  //res.redirect('/tweet')
+  
 });
 
