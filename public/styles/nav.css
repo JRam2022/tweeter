@@ -26,5 +26,13 @@ span {
   flex-direction: column;
 }
 
+.fa-solid.fa-angles-down {
+  color:red;
+  margin-top: -10%;
+}
+.fa-solid.fa-angles-down:hover {
+  color: gold;
+}
+
 
 
