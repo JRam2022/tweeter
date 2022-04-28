@@ -49,17 +49,16 @@ $(document).ready(function() {
   const loadTweets = function() {
     $.ajax('/tweets', { method: 'GET'})
     .then((data) => {
-      
       const renderTweet = renderTweets(data)
       $('#tweets-container').append(renderTweet);
     })
-
   }
   
-  loadTweets();
+  
 
   $('.tweet-form').submit(function (event){
     event.preventDefault();
+    
     const textCount = $(".counter").text()
     if (textCount >= 140 || textCount < 0) {
       alert('ERROR')
@@ -69,12 +68,15 @@ $(document).ready(function() {
     $.ajax({
       url: '/tweets',
       method: 'post',
-      data: serialized
+      data: serialized,
+      complete: loadTweets()
     })
     .catch((error) => {
       console.log("error", error)
     });
+    
   })
+  loadTweets()
   //res.redirect('/tweet')
 });
 
