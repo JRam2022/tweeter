@@ -20,7 +20,7 @@ $(document).ready(function() {
               ${tweet.content.text}
             </p>
           <div class="tweet-footer">
-            <p class="tweet-date">${tweet.created_at}</p>
+            <p class="tweet-date">${timeago.format(tweet.created_at)}</p>
             <div class="footer-icon">
               <i class="fa-solid fa-flag"></i>
               <i class="fa-solid fa-retweet"></i>
@@ -77,3 +77,4 @@ $(document).ready(function() {
   })
 
 });
+
