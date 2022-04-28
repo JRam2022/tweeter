@@ -59,18 +59,18 @@ $(document).ready(function() {
 
   $('.tweet-form').submit(function (event){
     event.preventDefault();
-    
     const serialized = $(this).serialize()
-    
+
+    //if tweet length > 140 chars or <=0 errors
+    if (this.length < 140 || this.length > 0) {
+      return alert("TRY AGAIN");
+    }
+
     $.ajax({
       url: '/tweets',
       method: 'post',
       data: serialized
     })
-    //.then((data) => {
-    //  const renderTweet = renderTweets(data)
-    //  $('#tweets-container').append(renderTweet);
-    //})
     .catch((error) => {
       console.log("error", error)
     });
