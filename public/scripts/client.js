@@ -7,6 +7,7 @@
 $(document).ready(function() {
   
   const createTweetElement = function(tweet) {
+
     const $tweet = `
       <article class="tweet-card">
           <div class="tweet-header">
@@ -48,6 +49,7 @@ $(document).ready(function() {
   const loadTweets = function() {
     $.ajax('/tweets', { method: 'GET'})
     .then((data) => {
+      
       const renderTweet = renderTweets(data)
       $('#tweets-container').append(renderTweet);
     })
@@ -55,17 +57,15 @@ $(document).ready(function() {
   }
   
   loadTweets();
-  
 
   $('.tweet-form').submit(function (event){
     event.preventDefault();
-    const serialized = $(this).serialize()
-
-    //if tweet length > 140 chars or <=0 errors
-    if (this.length < 140 || this.length > 0) {
-      return alert("TRY AGAIN");
+    const textCount = $(".counter").text()
+    if (textCount >= 140 || textCount < 0) {
+      alert('ERROR')
+      return;
     }
-
+    const serialized = $(this).serialize()
     $.ajax({
       url: '/tweets',
       method: 'post',
@@ -75,6 +75,6 @@ $(document).ready(function() {
       console.log("error", error)
     });
   })
-
+  //res.redirect('/tweet')
 });
 
