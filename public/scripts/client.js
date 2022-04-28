@@ -59,6 +59,8 @@ $(document).ready(function() {
       $('#tweets-container').append(renderTweet);
     })
   }
+
+  //hide errors until a error occurs
   const ErrTooMany = $(".error-too-many")
   const ErrNoContent = $(".error-no-content")
   
@@ -74,9 +76,11 @@ $(document).ready(function() {
 
     if (textCount >= 140) {
       //show 
+      $(ErrTooMany).hide()
       $(ErrNoContent).slideDown()
       return;
     } else if (textCount < 0){
+      $(ErrNoContent).hide()
       $(ErrTooMany).slideDown()
       //show
       return
