@@ -59,7 +59,8 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        
+        <p class="error-too-many">Tweet too long!</p>
+        <p class="error-no-content">Tweet must contain content!</p>
         <form class="tweet-form" action="/tweets" method="POST">
           <label class="tweetLabel" for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
@@ -68,6 +69,8 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+
+
       </section>
       <section id="tweets-container">
 
