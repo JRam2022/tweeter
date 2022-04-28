@@ -11,7 +11,6 @@ article:hover {
   font-weight: 600;
   margin-top: 50px;
   margin-bottom: 100px;
-  
 }
 
 .user-tweet {
@@ -22,7 +21,7 @@ article:hover {
   padding-bottom: 3%;
   padding-left: 2%;
   margin-top: 3%;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 .tweet-header {
@@ -45,6 +44,10 @@ article:hover {
   padding-left: 10%;
 }
 
+.user-handle {
+  color: lightgray
+}
+
 .user-info {
   display: flex;
   flex-direction: row;
@@ -62,12 +65,14 @@ article:hover {
 .tweet-date {
   position: relative;
   left: 30px;
+  
 }
 
 .footer-icon {
   position:sticky;
   left:88%;
   padding-right: 5%;
+  
 }
 
 .fa-solid:hover {

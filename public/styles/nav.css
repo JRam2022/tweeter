@@ -1,7 +1,8 @@
 nav {
   display: flex;
   justify-content: space-between;
-  position: fixed;
+  position: sticky;
+  top: 0;
   height: 120px;
   width: 100vw;
   background-color: #4056A1;

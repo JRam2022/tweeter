@@ -30,10 +30,24 @@ background: none;
 resize: none;
 width: 100%;
 outline: none;
-font-weight: 600;
+font-weight: 300;
 }
 
 .tweetLabel {
 font-weight: 600;
 color: grey;
+}
+
+.error-no-content {
+  color: red;
+  display: flex;
+  justify-content: center;
+  margin-top: -5%;
+}
+
+.error-too-many {
+  color: red;
+  display: flex;
+  justify-content: center;
+  margin-top: -5%;
 }
