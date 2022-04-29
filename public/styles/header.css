@@ -4,7 +4,6 @@ header {
   height: 400px;
   justify-content: center;
   flex-direction: column;
-  align-content: flex-end;
   background-color: orange;
   background-image: url("https://www.transparenttextures.com/patterns/cream-pixels.png");
 }
@@ -12,8 +11,6 @@ header {
 .headerImg {
   display: flex;
   justify-content: center;
-  
-  
 }
 
 .userName {

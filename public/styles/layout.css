@@ -35,3 +35,31 @@ main.container {
   flex-direction: column;
   width: 90%;
 }
+
+
+@media only screen and (min-width: 1024px) {
+
+  body {
+    display: flex;
+    justify-items: start;
+    flex-direction: column;
+  }
+
+  main.container {
+    display: flex;
+    margin-top: -330px;
+    max-width: 50%;
+    margin-left: 38%;
+    
+  }
+
+  header {
+    display: flex;
+    position: sticky;
+    top: 200px;
+    max-width: 30%;
+    height: auto;
+    margin-left: -60%;
+  }
+
+}
