@@ -5,7 +5,7 @@
  */
 
 $(document).ready(function() {
-  //stops xss attack D:
+  //escapes character so malicious strings cant be tweeted
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -13,7 +13,7 @@ $(document).ready(function() {
   };
   
   const createTweetElement = function(tweet) {
-
+    //template for tweets that uses info from data
     const $tweet = `
       <article class="tweet-card">
           <div class="tweet-header">
@@ -42,11 +42,11 @@ $(document).ready(function() {
 
   const renderTweets = function(tweets) {
   let tweetStr = ``
-  // loops through tweets
+  //loops through tweets
   for (const tweet of tweets) {
-    // calls createTweetElement for each tweet
+    //calls createTweetElement for each tweet
     const $newTweet = createTweetElement(tweet)
-    // takes return value and appends it to a temp string
+    //takes return value and appends it to a temp string
     tweetStr+=$newTweet
   }
   return tweetStr;
@@ -56,7 +56,10 @@ $(document).ready(function() {
     $.ajax('/tweets', { method: 'GET'})
     .then((data) => {
       const renderTweet = renderTweets(data)
+      //Creates new tweet with template and append
       $('#tweets-container').append(renderTweet);
+      //Resets form to empty when user submits
+      $('#tweet-text').val('')
     })
   }
 
@@ -69,11 +72,9 @@ $(document).ready(function() {
 
   $('.tweet-form').submit(function (event){
     event.preventDefault();
-    //.error-too-many
-    //.error-no-content
     
     const textCount = $(".counter").text()
-
+    //checks to see if content is compatible with app
     if (textCount >= 140) {
       //show 
       $(ErrTooMany).hide()
@@ -82,14 +83,11 @@ $(document).ready(function() {
     } else if (textCount < 0){
       $(ErrNoContent).hide()
       $(ErrTooMany).slideDown()
-      //show
       return
     } else {
-      //hide
       $(ErrNoContent).hide()
       $(ErrTooMany).hide()
     }
-
 
     const serialized = $(this).serialize()
     $.ajax({
@@ -103,7 +101,7 @@ $(document).ready(function() {
     });
     
   })
-
+  //loads initial tweets on page load
   loadTweets()
   
 });
