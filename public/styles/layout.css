@@ -36,7 +36,7 @@ main.container {
   width: 90%;
 }
 
-
+/*Switches to desktop view when windows is more than 1024 pixels*/
 @media only screen and (min-width: 1024px) {
 
   body {
